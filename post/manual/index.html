@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>PC-80 User Manual | Dfrdf4</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://z84c0008.github.io/favicon.ico?v=1741706543484">
+<link rel="stylesheet" href="https://z84c0008.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://z84c0008.github.io">
+        <img src="https://z84c0008.github.io/images/avatar.png?v=1741706543484" class="site-logo">
+        <h1 class="site-title">Dfrdf4</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="www.github.com/Z84C0008" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      
+    </div>
+    <div class="site-footer">
+      © 2025 Dfrdf4 Zhu , All rights reserved.
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">PC-80 User Manual</h2>
+            <div class="post-date">03-10-2025</div>
+            
+              <div class="feature-container" style="background-image: url('https://z84c0008.github.io/post-images/manual.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <h1 id="pc-80-用户指南">PC－80 用户指南</h1>
+<p>写在前面：这台机器的CPU位置实际上可以连接一个特殊的扩展板 它可以把CPU的所有管脚引出 便于拓展 ／ 更换振荡器 ／ Reset  但是在Type 1 中并未包括 如果使用的是Type 1 跳到：<a href="https://Z84C0008.github.io/post/manual-typeone">Type - 1 用户指南</a>
+以及，如果你已经把主板拆下来看过 你会发现它其实是一台Intel 8080兼容机 在文章末尾会给出CP／M系统固件的链接
+把它烧录到ROM芯片并启动 便可使用PS／2键盘操作CP／M 。由于默认情况下没有显示芯片（因为已经停产而无法购买到全新／散新件）输出会被放到LCD上 当您启动后 如果已经运行了修改后的CP／M 应该在屏幕上显示出：CPM Ready</p>
+<p>如果没有输出，检查ROM是否锁紧／烧录器是否工作正常／烧录器兼容性</p>
+<h2 id="11-启动">1.1 启动</h2>
+<p>本计算机在您收到时就应该是可以启动的 默认情况下烧录了电子钟程序
+只要看到1602屏幕上有输出 即为正常工作 如果没有显示 尝试调整对比度 ／ 检查并口线（杜邦线）</p>
+<p>ATTENTION:由于本机没有BIOS电池 电子钟可能并不准确 仅作判断启动是否正常的依据 如果不准确可以忽略</p>
+<h2 id="12-输入输出">1.2 输入／输出</h2>
+<p>本机有2个并口 如需串口／PS2 ， 把SIO Expansion （Milestone）和 PS2 Expander 链接到CPU扩展槽</p>
+<h2 id="13-主板部分说明">1.3 主板部分说明</h2>
+<p>主板上有Reset按钮 按下可使 ／RESET 脚位被拉低 可使其重置
+如果遇到程序卡死 按下按钮即可 无需插拔电源</p>
+<h2 id="关于电源的特殊说明">关于电源的特殊说明</h2>
+<p>本机电源包含在一分二USB Type B电源线中 为了避免对CPU造成干扰 请尽可能使用原装电源 不然可能出现一些莫名其妙对问题（亲测会有）</p>
+<h2 id="21-元件型号">2.1 元件型号</h2>
+<p>CPU：Z84C0010-XXX
+PIO：任何一种Z80 PIO芯片（有一些可能管脚定义不同 即使封装相同）
+RAM：HM628128
+ROM：AT28C256E－25DM
+Screen：LCD1602A</p>
+<h2 id="22-关于本机">2.2 关于本机</h2>
+<p>没事干搓的 比较简陋的Z80机 比不上当年的高端计算机 没有ROM Bank ／ 磁盘支持
+但是可以拓展出来 理论上找到当年的板卡插上也是可以使用的 但是仅限于理论 因为这台机器采用了新的10MHz Z80芯片 可能需要换到2MHz ／ 4MHz才能支持当年的板卡 但是切换的功能已经在CPU拓展板上提供 （通过跳线切换）</p>
+<p>跳线1｜跳线2｜跳线3
+1          0           0       =       10Mhz
+0          1           0       =        4Mhz
+0          0           1       =        2Mhz</p>
+<pre><code>	ATTENTION: 在Ver1.0之前的板子上三个跳线实际上是拨码开关 （排针缺货）
+</code></pre>
+<h2 id="221-意义">2.2.1 意义</h2>
+<p>没事干瞎击败搞得 没有啥意义 性能菜的一比
+＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃
+\（ '  _  ' )  ／      \（ '  _  ' )  /
+\          \     ==    /        /
+／        ／ ==       \        \<br>
+＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃</p>
+<h2 id="31-已知bug">3.1 已知BUG</h2>
+<p>暂无 有多少仍不明确 但是大概是不少的 尤其软件部分</p>
+<h3 id="automatically-uploaded-03-10-000000-2025">Automatically Uploaded ：03-10－00.00.00－2025</h3>
+<p>version 1.0
+‘25 Dfrdf4</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://z84c0008.github.io/tag/pc80" class="tag">
+                    PC80
+                  </a>
+                
+                  <a href="https://z84c0008.github.io/tag/intel-8080" class="tag">
+                    Intel 8080
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://z84c0008.github.io/post/hello-world">
+                  <h3 class="post-title">
+                    Hello World
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
